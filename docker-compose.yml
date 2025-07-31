@@ -1,0 +1,27 @@
+version: '3.9'
+
+services:
+  intent-classification-system:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: intent-classification-app
+    restart: unless-stopped
+    environment:
+      - API_KEY=${API_KEY}
+      - PYTHONPATH=/app
+    volumes:
+      - ./data:/app/data
+      - ./src:/app/src
+    stdin_open: true
+    tty: true
+    networks:
+      - intent-classification-network
+
+networks:
+  intent-classification-network:
+    driver: bridge
+
+volumes:
+  intent-data:
+    driver: local
