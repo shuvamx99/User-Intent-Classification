@@ -24,7 +24,6 @@ RUN pip install --upgrade pip
 RUN pip install --no-cache-dir --prefer-binary -r requirements.txt
 
 # Copy the entire intent classification system
-# Update path to copy from the subdirectory
 COPY . .
 
 # Create a non-root user
