@@ -9,4 +9,3 @@ class ConfidenceLevel(str, Enum):
     MEDIUM = "MEDIUM"
     LOW = "LOW"
     UNSUITABLE = "UNSUITABLE"
-
