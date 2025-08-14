@@ -16,14 +16,23 @@ This system helps you catch fraudulent users by automatically selecting the righ
 
 ```mermaid
 flowchart TD
-    A[👤 You ask:<br/>"Find suspicious users"] --> B[🧠 AI understands<br/>your request]
-    B --> C[📚 Checks memory:<br/>"What worked before?"]
-    C --> D[🤖 Selects best tools:<br/>Geographic + IP + Speed]
-    D --> E[🔍 Runs fraud detection<br/>on your data]
-    E --> F[📊 Shows results:<br/>Suspicious users found]
-    F --> G[⭐ You rate results<br/>1-5 stars]
-    G --> H[💾 System learns<br/>and remembers]
+    A[User Request] --> B[AI Processing]
+    B --> C[Check Memory]
+    C --> D[Select Tools]
+    D --> E[Run Detection]
+    E --> F[Show Results]
+    F --> G[Rate Results]
+    G --> H[System Learns]
     H -.-> C
+
+    A -.-> |"Find suspicious users"| B
+    B -.-> |"Analyze request intent"| C
+    C -.-> |"What worked before?"| D
+    D -.-> |"Geographic + IP + Speed"| E
+    E -.-> |"Process user data"| F
+    F -.-> |"Display findings"| G
+    G -.-> |"1-5 star rating"| H
+    H -.-> |"Update recommendations"| C
 
     style A fill:#e3f2fd
     style B fill:#f3e5f5
