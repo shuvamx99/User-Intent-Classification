@@ -1,8 +1,16 @@
-# Smart Fraud Detection System 🛡️
+# User Intent Classification System
+
+## Goal
+The goal was to create a multi agent system capable of finding out which agent to use based on user prompt. There are multiple agentic frameworks like OpenAI's swarm which assist in easily setting up agents, however it doesn't allow the user to modify how the model will go about deciding which agent to use.
+I've tried to do so by adding additional information to each agent to add more context around their usage. On top of this, a continuous feedback learning loop is implemented by reranking predictions based on user feedback. 
+Basically, the application is able to "change" its selections by checking which agent has worked better for this type of query in the past and can build more confidence on its selections. This helps the application understand the intent behind the prompt and come up with suitable agent classifications in order to achieve the desired goal.
+
+
 
 ## What does it do?
 
-This system helps you catch fraudulent users by automatically selecting the right detection tools based on your request. It gets smarter over time by learning from your feedback.
+I've used the domain of fraud detection to create the agents. The same can be extended for any usecase.
+The system helps you catch fraudulent users by automatically selecting the right detection tools based on your request. It gets smarter over time by learning from your feedback.
 
 ### Simple Example:
 
